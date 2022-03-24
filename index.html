@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="shop-container">
+        <div class="product-card" id="espresso">
+            <div class="product-image">
+                <img src="./images/espresso.jpg" alt="espresso">
+            </div>
+            
+            <div class="product-details">
+                <h1 class="product-name">Espresso</h1>
+                <p class="product-description">
+                    Our signature espresso is well extracted, and is sure to wake you up in the morning
+                </p>
+                <p class="product-price">LOADING...</p>                
+            </div>
+
+            <div class="product-quantity">
+                <div class="quantity-input">
+                    <button onclick="updateQuantity(this)" class="decrement">-</button>
+                    <input class="quantity" min="1" value="1" type="number" onchange="updateQuantity(this, true)">
+                    <button onclick="updateQuantity(this)" class="increment">+</button>
+                </div>
+                <p class="quantity-total">LOADING...</p>
+            </div>
+            <button class="product-ordering" onclick="updateCart(this)">ADD TO CART</button>
+        </div>
+
+        <div class="product-card" id="iced-latte">
+            <div class="product-image">
+                <img src="./images/iced-latte.jpg" alt="iced latte">
+            </div>            
+            <div class="product-details">
+                <h1 class="product-name">Iced Latte</h1>
+                <p class="product-description">
+                    Ideal for a warm summer day when you need a little something cool and refreshing
+                </p>
+                <p class="product-price">LOADING...</p>
+            </div>
+            <div class="product-quantity">
+                <div class="quantity-input">
+                    <button onclick="updateQuantity(this)" class="decrement">-</button>
+                    <input class="quantity" min="1" value="1" type="number" onchange="updateQuantity(this, true)">
+                    <button onclick="updateQuantity(this)" class="increment">+</button>
+                </div>
+                <p class="quantity-total">LOADING...</p>
+            </div>
+            <button class="product-ordering" onclick="updateCart(this)">ADD TO CART</button>
+        </div>
+
+        <div class="product-card" id="cappuccino">
+            <div class="product-image">
+                <img src="./images/cappuccino.jpg" alt="cappuccino">
+            </div>            
+            <div class="product-details">
+                <h1 class="product-name">Cappuccino</h1>
+                <p class="product-description">
+                    Something a little warmer, milkier and more luxurious for when you are feeling cold
+                </p>
+                <p class="product-price">LOADING...</p>
+            </div>
+            <div class="product-quantity">
+                <div class="quantity-input">
+                    <button onclick="updateQuantity(this)" class="decrement">-</button>
+                    <input class="quantity" min="1" value="1" type="number" onchange="updateQuantity(this, true)">
+                    <button onclick="updateQuantity(this)" class="increment">+</button>
+                </div>
+                <p class="quantity-total">LOADING...</p>
+            </div>
+            <button class="product-ordering" onclick="updateCart(this)">ADD TO CART</button>
+        </div>
+    </div>
+
+    <nav>
+        <a href="" style="margin-right: auto;">go back...</a>
+        <a href="./checkout.html" style="margin-left: auto;">...checkout</a>
+    </nav>
+
+    <script src="./index.js"></script>
+
+</body>
+</html>

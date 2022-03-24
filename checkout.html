@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="checkout-container">
+        <div class="checkout-card">
+            cart
+        </div>
+
+        <div class="checkout-card">
+            <form action="http://localhost:3000" method="post" id="details-form">
+                <input type="text" name="firstName" id="first-name" placeholder="First Name">
+                <input type="text" name="lastName" id="last-name" placeholder="Last Name">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="checkbox">
+                <input type="submit">
+            </form>
+            details
+        </div>
+
+        <div class="checkout-card">
+            verify email
+        </div>
+
+        <div class="checkout-card">
+            payment
+            <form id="payment-form">
+                <div id="card-container"></div>
+                <button id="card-button" type="button">Pay $1.00</button>
+            </form>
+            <div id="payment-status-container">
+        </div>
+    </div>
+    
+
+    <!-- 
+
+    <div class="details-container">
+        <form action="" id="details-form">
+            <div class="form-item">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" required>
+            </div>
+            
+            <div class="form-item">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required>
+            </div>
+
+            <div class="form-item">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required>
+            </div>
+        </form>
+    </div>
+
+    </div> -->
+
+    <nav>
+        <a href="" style="margin-right: auto;">go back...</a>
+        <a href="./index.html" style="margin-left: auto;">...shop</a>
+    </nav>
+
+    <script src="./checkout.js"></script>
+
+</body>
+</html>

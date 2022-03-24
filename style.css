@@ -1,0 +1,162 @@
+:root {
+    --clr-primary-200: #FFEEDD;;
+
+    --clr-accent-400: #35D090;
+    --clr-accent-600: #65A595;
+
+    --clr-neutral-100: #FEFEFE;
+    --clr-neutral-900: #020202;
+
+    --ff-primary: "Courier New", Courier, monospace;
+}
+
+body {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-900);
+    font-family: var(--ff-primary);
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: var(--clr-accent-400);
+    border: none;
+    color: var(--clr-primary-200);
+}
+button:hover {
+    background-color: var(--clr-neutral-900);
+}
+
+img {
+    display: block;
+    height: 30rem;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;    
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    background: none;
+    border: none;
+    color: var(--clr-primary-200);
+    margin-left: 1ch;
+    width: 2ch;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    padding: 0.4rem;
+    margin-bottom: 0.8rem;
+    background-color: var(--clr-accent-600);
+}
+
+.checkout-card {
+    padding: 1rem;
+}
+
+.product-card, .checkout-card {
+    background-color: var(--clr-primary-200);
+    box-shadow: 10px 10px var(--clr-neutral-900);
+    color: var(--clr-neutral-900);
+    display: grid;
+    margin-top: 2rem;
+    overflow: hidden;
+} 
+
+.product-card {
+    grid-template-areas: 
+    "image"
+    "details"
+    "quantity"
+    "order";
+}
+
+.product-image {
+    grid-area: image;
+}
+
+.product-details {
+    grid-area: details;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.product-ordering {
+    grid-area: order;
+    height: 2rem;
+    margin: auto;
+    margin-bottom: 0.76rem;
+    padding: auto;
+    width: 90%;    
+}
+
+.product-quantity {
+    color: var(--clr-primary-200);
+    grid-area: quantity;
+    display: flex;
+    /* padding: 10px; */
+    padding: auto;
+    margin: auto;
+    height: 3.24rem;
+    width: 90%;
+    margin-bottom: 0.76rem;
+    background-color: var(--clr-accent-600);
+}
+
+.product-price {
+    font-weight: bold;
+}
+
+.product-name::after {
+    content: "";
+    display: block;
+    width:100%; 
+    border-bottom: 1px solid var(--clr-neutral-900);
+}
+
+.quantity-input {
+    margin: auto auto auto 1rem;
+}
+.quantity-input button {
+    width: 3ch;
+    height: 3ch;
+}
+
+.quantity-total {
+    margin: auto 1rem auto auto;
+}
+
+.shop-container, .checkout-container {
+    margin: auto;
+    margin-bottom: 4rem;
+    width: 90%;
+}
+
+@media (min-width: 860px) {
+    img {
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .product-card {
+        grid-template-areas: 
+        "image details"
+        "image quantity"
+        "image order";
+    }
+
+    .shop-container, .checkout-container {
+        width: max(50%, 50rem);
+    }  
+}
